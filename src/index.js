@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 import Router from 'src/pages';
-import 'antd/dist/antd.less';
+import 'antd/dist/antd.css';
 
 const wrapper = document.getElementById('container');
 

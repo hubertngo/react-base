@@ -14,7 +14,21 @@ module.exports = {
 				},
 			},
 			{
+				test: /\.css$/,
+				include: /node_modules\/antd/,
+				use: [
+					require.resolve('style-loader'),
+					{
+						loader: require.resolve('css-loader'),
+						options: {
+							importLoaders: 1,
+						},
+					},
+				],
+			},
+			{
 				test: /\.(?:le|c)ss$/,
+				exclude: /node_modules/,
 				use: [
 					require.resolve('style-loader'),
 					{
@@ -28,6 +42,17 @@ module.exports = {
 						options: {
 							importLoaders: 1,
 							javascriptEnabled: true,
+						},
+					},
+				],
+			},
+			{
+				test: /\.(png|svg|jpg|jpeg|gif)$/,
+				use: [
+					{
+						loader: 'url-loader',
+						options: {
+							limit: 8192,
 						},
 					},
 				],
