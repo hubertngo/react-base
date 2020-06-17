@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/alt-text */
 /* --------------------------------------------------------
 * Author Ngô An Ninh
 * Email ninh.uit@gmail.com
@@ -6,12 +7,12 @@
 * Created: 2020-06-17 00:29:25
 *------------------------------------------------------- */
 import React from 'react';
-import './styles.less';
 import Back1 from 'src/assets/images/img.jpg';
+import styles from './styles.less';
 
 const HomePage = () => {
 	return (
-		<div className="root">
+		<div className={styles.root}>
 			<img src={Back1} />
 			<h1>Home 12</h1>
 		</div>

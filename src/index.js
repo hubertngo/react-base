@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 
 import Router from 'src/pages';
 import 'antd/dist/antd.css';
+import 'src/assets/theme/less/index.less';
 
 const wrapper = document.getElementById('container');
 
